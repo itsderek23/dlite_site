@@ -1,0 +1,31 @@
+---
+---
+
+.small {
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+.text-muted {
+  color: gray;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 180%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700
+}
+
+main {
+  h2, h3 {
+    margin-top: 70px;
+  }
+
+  h4, h5, h6 {
+    margin-top: 30px;
+  }
+}
