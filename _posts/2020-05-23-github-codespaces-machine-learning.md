@@ -37,7 +37,7 @@ $ source venv/bin/activate
 ```
 
 <p class="text-muted small" style="margin-top:-10px">
-[whisk](http://docs.whisk-ml.org) creates a data science-flavored version of a Python project structure.
+<a href="http://docs.whisk-ml.org">whisk</a> creates a data science-flavored version of a Python project structure.
 </p>
 
 It's easy to run an ML project within Codespaces when it has a solid structure. __The [project structure](https://docs.whisk-ml.org/en/latest/project_structure.html) in this tutorial was generated using [whisk](http://docs.whisk-ml.org), an open-source ML project framework that makes collaboration, reproducibility, and deployment “just work”.__ I've been developing whisk with Adam Barnhard of [Booklet.ai](https://booklet.ai).
@@ -93,7 +93,9 @@ View the [devcontainer.json reference](https://code.visualstudio.com/docs/remote
 
 ## Running the project inside Codespaces
 
-We're ready to start. From the [GitHub project](https://github.com/whisk-ml/disaster_tweets), click the ![code button](/img/posts/codespaces/code_button.png) button and create a new codespace. After a couple of minutes the project environment will be created.
+![download](/img/posts/codespaces/open_codespaces_button.png)
+
+We're ready to start. From the [GitHub project](https://github.com/whisk-ml/disaster_tweets), click the "Code" button and create a new codespace. After a couple of minutes the project environment will be created.
 
 ### The notebook
 
@@ -127,11 +129,28 @@ Your browser does not support the video tag.
 
 In the above example, the model believes that this is most likely a real disaster.
 
+#### Use the web service
+
+[whisk](http://docs.whisk-ml.org) also sets up a Flask web service to invoke the model. You can use the web service from Codespaces (mind blown). To start the web app, run `whisk app start` inside the terminal. To view the web app in your browser, click the remote explorer icon and "Port 5000" under forwarded ports:
+
+
+<video controls id="flask_app" loop style="width:100%">
+ <source src="/img/posts/codespaces/disaster_tweets_flask.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="small text-muted">
+You can even view web apps inside GitHub Codespaces.
+</p>
+
+<script>
+ document.getElementById("flask_app").playbackRate = 3.0;
+</script>
+
 #### See the pipeline for training the model
 
 You might be curious: how is model is trained? What files does the training stage generate? As this project uses [DVC](https://dvc.org) to version control the training pipeline it's easy to inspect the training flow from the terminal.
 
-From the terminal you can view the stages in the pipeline wiht `dvc pipeline show`:
+From the terminal you can view the stages in the pipeline with `dvc pipeline show`:
 
 ```
 dvc pipeline show --ascii train.dvc
@@ -175,23 +194,6 @@ Your browser does not support the video tag.
  document.getElementById("dvc_repro_terminal").playbackRate = 2;
 </script>
 
-#### Use the web service
-
-[whisk](http://docs.whisk-ml.org) also sets up a Flask web service to invoke the model. You can use the web service from Codespaces (mind blown). To start the web app, run `whisk app start` inside the terminal. To view the web app in your browser, click the remote explorer icon and "Port 5000" under forwarded ports:
-
-
-<video controls id="flask_app" loop style="width:100%">
- <source src="/img/posts/codespaces/disaster_tweets_flask.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p class="small text-muted">
-You can even view web apps inside GitHub Codespaces.
-</p>
-
-<script>
- document.getElementById("flask_app").playbackRate = 3.0;
-</script>
-
 ## Summary
 
 With a [whisk](https://whisk-ml.org)-structure ML project and a [`devcontainer.json` file](https://help.github.com/en/github/developing-online-with-codespaces/configuring-codespaces-for-your-project), you've created an easy onramp for potential contributors. [Codespaces](https://github.com/features/codespaces) is a good option when your project has evolved beyond the proof-of-concept, single notebook stage of an ML project.
@@ -201,4 +203,4 @@ With a [whisk](https://whisk-ml.org)-structure ML project and a [`devcontainer.j
 * [GitHub Codespaces Docs](https://help.github.com/en/github/developing-online-with-codespaces)
 * [Disaster Tweets - Real or Not? GitHub repo](https://github.com/whisk-ml/disaster_tweets)
 * [Whisk ML Project Framework](https://docs.whisk-ml.org/en/latest/)
-* [Data Version Control](https://dvc.org)
+* [Data Version Control (DVC)](https://dvc.org)
