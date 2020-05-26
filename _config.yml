@@ -23,7 +23,7 @@ email: derek@dlite.cc
 description: >- # this means to ignore newlines until "baseurl:"
   This is the web site of Derek Haynes. I'm currently researching tools to give data scientists more flow when working on machine learning projects.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://dlite.cc" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: itsderek23
 github_username:  itsderek23
 
@@ -31,6 +31,7 @@ github_username:  itsderek23
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
