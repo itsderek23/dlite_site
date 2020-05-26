@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  GitHub Codespaces for Machine Learning
-date:   2020-05-23 06:53:05 -0600
+date:   2020-05-26 06:53:05 -0600
+hero_image: /img/posts/codespaces/github_codespaces_screenshot.png
+description: Learn how to give potential contributors to your ML project a smooth onramp by providing a pre-configured IDE environment via GitHub Codespaces.
 ---
 
 ![github_codespaces_screenshot](/img/posts/codespaces/github_codespaces_screenshot.png)

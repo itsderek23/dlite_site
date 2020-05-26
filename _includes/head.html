@@ -2,6 +2,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- seo + feed_meta are included in the minima theme plugin -->
+  <!-- https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md -->
   {%- seo -%}
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
@@ -10,4 +12,7 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  {% if page.hero_image %}
+  <meta property="og:image" content="https://dlite.cc{{ page.hero_image }}">
+  {% endif %}
 </head>

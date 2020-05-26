@@ -5,6 +5,7 @@ date:   2020-04-02 10:00:14 -0600
 author: Derek Haynes
 description: Learn how to develop an ML app for a PyTorch Model faster by using AWS SageMaker local mode.
 hero_image: /img/posts/sagemaker-pytorch-local-dev/screenshot.png
+canonical_url: https://booklet.ai/blog/aws-sagemaker-pytorch-local-dev-flow/
 ---
 
 As a hack data scientist but mostly-legit web developer, __I'm frustrated with the process of creating an ML application__ (a simple UI to trigger predictions and a publicly accessible API). The flow for creating and iterating on a typical web application feels like driving down a low-traffic, gently curving country road on a spring day. The ML app dev flow? It's like learning how to drive a car with a manual transmission.
