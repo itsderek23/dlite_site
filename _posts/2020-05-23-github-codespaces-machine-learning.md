@@ -194,6 +194,13 @@ Your browser does not support the video tag.
  document.getElementById("dvc_repro_terminal").playbackRate = 2;
 </script>
 
+## Future enhancements
+
+There are some things I'd like to improve about this setup in the future:
+
+* __git commits fail via the UI__ - Currently I can't commit from the UI as it doesn't appear the git commands are run within the project's venv. My commits fail as I call `dvc` in a pre-commit hook and dvc is installed in the venv. This hasn't been a blocker for me as I use the terminal anyway for git.  
+* __Clearer ready state__ - Codespaces appears to let you use the IDE before everything is loaded. For example, I can open a notebook prior to to the Python extension being installed. When this happens, I'll see a bunch of scary warnings (ex: Python isn't installed). Waiting a bit clears the warnings and then I can execute the notebook.
+
 ## Summary
 
 With a [whisk](https://whisk-ml.org)-structure ML project and a [`devcontainer.json` file](https://help.github.com/en/github/developing-online-with-codespaces/configuring-codespaces-for-your-project), you've created an easy onramp for potential contributors. [Codespaces](https://github.com/features/codespaces) is a good option when your project has evolved beyond the proof-of-concept, single notebook stage of an ML project.
