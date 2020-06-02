@@ -6,7 +6,6 @@ author: Derek Haynes
 description: An ML project ties together large datasets, a slow training process without clear pass/fail acceptance tests, and contains multiple types of deliverables. By comparison, a classical software project just contains code and has a single deliverable (an application). Thankfully, it's possible to create a Machine Learning-specific flavor of Continuous Delivery (CD4ML) for non-enterprise organizations with existing tools today.
 hero_image: /img/posts/cd4ml/cd4ml_tools.png
 excerpt: Things feel slightly different - but eerily similar - when traveling through Canada as an American. The red vertical lines on McDonald's straws are a bit thicker, for example. It's a lot like my travels through the world of data science as a software engineer.
-canonical_url: https://booklet.ai/blog/continuous-delivery-machine-learning-cd4ml/
 ---
 
 ![i love lucy](/img/posts/cd4ml/i_love_lucy.jpg)
