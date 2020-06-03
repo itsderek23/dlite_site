@@ -99,4 +99,12 @@ Now that you've seen how whisk works, I'd like to share the beliefs that drove t
 
 ## Get started!
 
-I'd love to hear how [whisk](http//docs.whisk-ml.org) fits your workflow. Just follow the [whisk quick tour](https://docs.whisk-ml.org/en/latest/tour_of_whisk.html) to make collaboration, reproducibility, and deployment “just work” on your next DS project.
+Follow the [whisk quick tour](https://docs.whisk-ml.org/en/latest/tour_of_whisk.html) to get started and make collaboration, reproducibility, and deployment “just work” on your next DS project.
+
+## whisk resources
+
+* [Documentation](https://docs.whisk-ml.org)
+* [whisk on GitHub](https://github.com/whisk-ml/whisk)
+* Example projects
+  * [Disaster Tweets](https://github.com/whisk-ml/disaster_tweets) - A Tensorflow-backed Keras model that predicts which tweets are about real disasters and which ones are not.
+  * [Bike Image Classifier](https://github.com/whisk-ml/bike_image_classifier_tensorflow) - A Tensflow-backed classifier to determine if an image is of a Mountain bike or a Road bike.
