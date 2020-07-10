@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Scamp 16' Trailer review: 3 years later"
+title:  "Scamp 16 ft. Trailer review: 3 years later"
 date:   2020-07-10 05:00:00 -0600
 ---
 
