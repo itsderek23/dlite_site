@@ -20,7 +20,7 @@ Six months ago I had already reserved a spot at [Glacier Basin Campground](https
 
 [Estes Park](https://en.wikipedia.org/wiki/Estes_Park%2C_Colorado) is typically packed with tourists during the summer and I was curious how the town would look with a pandemic at play. Additionally, with a [Colorado-wide mask order](https://covid19.colorado.gov/mask-guidance) in effect, I was curious how wide-spread mask-wearing would be. As I made my way into Estes, I was surprised to see it looked just as busy as a pandemic-free summer. I'd estimate about half of the folks walking around were wearing masks and most had a mask on their person. This seemed pretty decent considering masks are not required outdoors and are just suggested when you can't keep less than six feet distance (which was definitely the case).
 
-There was a reasonable five-minute wait to get into the park from the Beaver Meadows entrance station. With [Cinematic Indie Folk](https://open.spotify.com/playlist/37i9dQZF1DWZyQUsU1vj4x) playing on the radio, cool mountain air, and the sounds of Glacier Creek out the window, the short drive to the campground from the entrance station makes always makes me grateful to have RMNP out my backdoor.
+There was a reasonable five-minute wait to get into the park from the Beaver Meadows entrance station. With [Cinematic Indie Folk](https://open.spotify.com/playlist/37i9dQZF1DWZyQUsU1vj4x) playing on the radio, cool mountain air, and the sounds of Glacier Creek out the window, the short drive to the campground from the entrance station always makes me grateful to have RMNP out my backdoor.
 
 Following a dinner of salmon, salad, and pearled couscous I strolled through the large swaths of the closed group camping areas of the campground. The views of the surrounding peaks are spectacular, but I missed the sounds of campers laughing, running, and playing. There are natural areas I appreciate for their solitude and others I love for their hustle and bustle. RMNP falls into that latter category and it was hard not to feel a bit melancholy.
 
@@ -84,6 +84,8 @@ After descending through the tundra I saw almost no hikers. The start of a light
 ![feet](/img/posts/hallett/feet.JPG)
 
 After driving back to the Glacier Basin Campground, I grabbed my small camping chair, my lunch, and my book and dipped my feet in the ice-cold waters of Glacier Creek. Outside of a blister on the back of my foot (quite the way to break in a new pair of shoes), I was feeling pretty good.
+
+Hallett Peak is a great hike for those that want big views and a trip through multiple vegetation zones without the exposure of Longs Peak. One of my favorite parts of the hike is that you start with a tremendous, sun-splashed view of the final destination over Bear Lake at the start.
 
 ## What about that funk?
 
