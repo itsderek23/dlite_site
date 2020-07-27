@@ -7,4 +7,4 @@ layout: home
 
 # Why hello there.
 
-I'm Derek Haynes. I'm finding my way after co-founding Scout APM (acquired) and Scout Server Monitoring (acquired).
+I'm Derek Haynes. Currently I'm writing, cycling, and exploring Colorado. Previously I co-founded Scout APM and Scout Server Monitoring (both acquired).
