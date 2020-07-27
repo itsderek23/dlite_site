@@ -7,4 +7,4 @@ layout: home
 
 # Why hello there.
 
-I'm Derek Haynes. Currently I'm researching tools to give folks more flow when working on data science projects. Most recently I released [whisk](https://docs.whisk-ml.org), an open-source data science project framework. Previously I co-founded Scout APM (acquired) and Scout Server Monitoring (acquired).
+I'm Derek Haynes. Currently I'm writing, cycling, and exploring Colorado. Previously I co-founded Scout APM and Scout Server Monitoring (both acquired).
