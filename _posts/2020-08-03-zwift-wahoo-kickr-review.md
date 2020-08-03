@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Zwift + Wahoo Kickr Core + Strava Review"
+title:  "Zwift + Wahoo Kickr Core Review"
 date:   2020-08-03 05:00:00 -0600
 ---
 
@@ -40,7 +40,7 @@ Tangentially, [Peleton](https://www.onepeloton.com/bike) (from $2,245 or $58/mo 
 
 Why has indoor training evolved this way? It's all about motivation. In the _The Rocky V Era_, it was up to you define workouts and get your heart rate into the proper zone. That's easy to let up on. _The Smart Solo Era_ made it easier to stay motivated by setting power and interval lengths for you and you see your metrics (power, heart rate, cadence, etc) following a workout. It's motivating to hit the workout's prescribed numbers. Finally, the _The Multi-Player Era_ taps into our innate competitive instinct: it's hard to resist chasing a rider up the road even when they are just a collection of sprites on the screen. It's easier than ever before to stay motivated on a trainer.
 
-## Setting up the Wahoo Kickr Core, Zwift, and Strava
+## Setting up the Wahoo Kickr Core and Zwift
 
 Connecting all of these parts isn't too bad:
 
