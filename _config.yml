@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is the web site of Derek Haynes. Currently I'm writing, cycling, and exploring Colorado. Previously I co-founded Scout APM and Scout Server Monitoring (both acquired).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dlite.cc" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: itsderek23
+twitter_username: dhaynes23
 github_username:  itsderek23
 
 # Build settings
