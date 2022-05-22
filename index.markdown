@@ -7,4 +7,4 @@ layout: home
 
 # Why hello there.
 
-I'm Derek Haynes. Currently I'm writing, cycling, and exploring Colorado. Previously I co-founded Scout APM and Scout Server Monitoring (both acquired).
+I'm Derek Haynes, product manager at Greenzie building autonomous commercial lawnmowers. Previously I co-founded Scout APM and Scout Server Monitoring (both acquired).
