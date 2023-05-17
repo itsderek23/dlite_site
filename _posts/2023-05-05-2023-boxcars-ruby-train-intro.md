@@ -1,16 +1,18 @@
 ---
 layout: post
-title:  "Implementing an LLM Agent with ReAct (Reasoning + Acting) in Ruby with Boxcars"
+title:  "Implementing an LLM Agent to complete tasks using Google with Ruby"
 date: 2023-05-08 05:00:00 -0600
 ---
+
+<img src ="/img/posts/boxcars_react/cover.png" height=600>
 
 Being lazy, I'm _very_ interested in using agents powered by LLMs to accomplish tasks for me. In this post, I explore how this is done with [Boxcars](github.com/boxcarsAI/boxcars), a Ruby gem inspired by [Langchain](https://github.com/hwchase17/langchain) for building LLM apps. 
 
 ## Quick intro to Boxcars
 
-Boxcars is a Ruby gem that makes it easy to build applications with LLMs. I've found it much easier to use than Langchain as it provides "just enough" abstractions to interact with an LLM an act on the output. See the [getting started docs](https://github.com/BoxcarsAI/boxcars/wiki/Getting-Started) to get going on your own.
+Boxcars is a Ruby gem that makes it easy to build applications with LLMs. I've found it much easier to use than Langchain as it provides "just enough" abstractions to interact with an LLM and act on the output. See the [getting started docs](https://github.com/BoxcarsAI/boxcars/wiki/Getting-Started) to get going on your own.
 
-## A single boxcar train for realtime weather information
+## A single boxcar train for realtime weather
 
 In this example, I'll setup a train with a custom Boxcar, `GoogleAnswerBox` ([source](https://gist.github.com/itsderek23/7fabe8ec9d1874593ccec015b0f92b5c)). `GoogleAnswerBox` returns the answer box in Google search results (the box at the top of the page that is displayed if Google can answer your question directly) as JSON.
 
@@ -46,15 +48,17 @@ train.run("what time is it in Denver?")
  => "The current time in Denver is 08:41 AM. \nNext Actions: None, as the user's question has been answered." 
 ```
 
-How does Boxcars orchestrate taking my query, interacting with an external tool (Google Search), and generating an answer?
+How does Boxcars take my query, interact with an external tool (Google Search), and generate an answer?
 
 ## ReAct (Reason + Act) on Ruby
+
+<img src ="/img/posts/boxcars_react/tools.png" height="400">
 
 If I asked you for the current temperature, time, or score of an NBA playoff game, you would need an external tool to provide me with this information. It's not stored in your brain, but your brain can determine which tool to use, interact with the tool, process the data displayed in the tool, and finally provide me with an answer. 
 
 Just like your brain, an LLM cannot provide you with information on current events, but you can give an LLM information on external tools they can use to fetch realtime data. Perhaps the most popular approach for having an LLM reason and use external tools is the ReAct (Reason + Act) framework, introduced in [this paper](https://arxiv.org/abs/2210.03629) (Shunyu et al., 2022). In the example above, Boxcars uses a Zero Shot (no training) ReAct prompt to provide answers. 
 
-Let's walk through the magic. 
+Let's walk through how Boxcars implements ReAct when using the `GoogleAnswerBox` tool. 
 
 ### First prompt
 
@@ -85,10 +89,10 @@ Question: what is the temperature in Fort Collins?
 Thought: 
 ```
 
-First, this is fascinating. There's no training involved. It takes under 140 words of system instructions to get the answer to our question. The prompt is first broken down into three ChatGPT-specific roles:
+Taking a step back: this is fascinating. There's no training involved. It takes under 140 words of system instructions to get the answer to our question. The prompt is first broken down into three ChatGPT-specific roles:
 
 1. `>>>>>> Role: system <<<<<<` - these instructions guide the model throughout the conversation.
-2. `>>>>>> Role: user <<<<<<` - the person chatting asking to ChatGPT.
+2. `>>>>>> Role: user <<<<<<` - the person asking questions to ChatGPT.
 3. `>>>>>> Role: assistant <<<<<<` - responses from ChatGPT to questions.
 
 You can [learn more about ChatGPT roles](https://help.openai.com/en/articles/7437211-chat-beta) from their docs.
@@ -146,7 +150,7 @@ The `Boxcars::Train object` takes the ChatGPT response and parses out the `Actio
 Answer: {"type":"weather_result","temperature":"49","unit":"Fahrenheit","precipitation":"0%%","humidity":"65%%","wind":"3 mph","location":"Weather","date":"Monday 7:00 AM","weather":"Mostly sunny","thumbnail":"https://serpapi.com/searches/6458f883ce87f81e4d7973c2/images/dccefb93a84c042f2c5d64fd510927300f2ceedeb076f4ff.png","forecast":[{"day":"Monday","weather":"Partly cloudy","temperature":{"high":"73","low":"45"},"thumbnail":"https://serpapi.com/searches/6458f883ce87f81e4d7973c2/images/dccefb93a84c042f85705f9091acff95c6669fc2faa0664facd6d2464297ada0.png"},{"day":"Tuesday","weather":"Mostly sunny","temperature":{"high":"78","low":"48"},"thumbnail":"https://serpapi.com/searches/6458f883ce87f81e4d7973c2/images/dccefb93a84c042f85705f9091acff9581bc24fa381ee107ae5c17df0e61b10a.png"},{"day":"Wednesday","weather":"Scattered thunderstorms","temperature":{"high":"72","low":"50"},"thumbnail":"https://serpapi.com/searches/6458f883ce87f81e4d7973c2/images/dccefb93a84c042f85705f9091acff9502e1868124e15c11dc1beb
 ```
 
-Yes, that is just an ugly truncated JSON representation of the Google answer box in the search result. `GoogleAnswerBox` does not parse this JSON in Ruby: there are many variations of answer box formats. Why not let ChatGPT parse this for me?
+__Yes, that is just an ugly truncated JSON representation of the Google answer box in the search result. `GoogleAnswerBox` does not parse the contents of the answer box: there are many variations of answer box formats. Why not let ChatGPT parse this for me?__
 
 ### Third and final prompt
 
@@ -169,11 +173,13 @@ ChatGPT returns:
 Final Answer: The current temperature in Fort Collins is 49 degrees Fahrenheit.
 ```
 
-Our ZeroShot train sees the magic `Final Answer` text and returns the result.
+Our ZeroShot train sees the magic `Final Answer` text, exits, and returns the result.
 
 _Note: the temperature increased from 45 to 49 degrees while writing this blog post._
 
 ## Going deeper: a two boxcar train to query both a Rails DB and Google
+
+<img src ="/img/posts/boxcars_react/train.png" height=400>
 
 Just like you'll use multiple tools to accomplish a task, the ReAct framework can do the same. Let's setup a Boxcar train with two boxcars, ActiveRecord for searching my Rails database and Google Answer Box. I'll find out the time in a user's timezone:
 
