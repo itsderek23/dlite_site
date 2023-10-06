@@ -11,14 +11,20 @@
 }
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1.25rem;
+  // font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.1rem;
   line-height: 180%;
   color: #2d3748;
 }
 
+.post-title {
+  letter-spacing: normal;
+  line-height: normal;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700
+  font-weight: 700;
+  line-height: normal;
 }
 
 main {
@@ -40,7 +46,7 @@ main {
     margin-bottom: 30px;
   }
   margin: 100px 0;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .post-list {
@@ -48,6 +54,10 @@ main {
   h3 {
     margin: 0
   }
+}
+
+.post-link {
+  font-size: 1.1rem;
 }
 
 .post-list-heading {
