@@ -7,7 +7,7 @@ layout: home
 
 # Why hello there.
 
-I'm Derek Haynes. Working on [OpsTower.ai](https://github.com/opstower-ai/llm-opstower) 🗼, a DevOps AI Assistant.
+I'm Derek Haynes.
 
 Past: co-founded Scout APM, Scout Server Monitoring (both acquired), and Product Managed at Greenzie (autonomous lawnmowers).
 
