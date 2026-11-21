@@ -3,6 +3,7 @@ layout: post
 title:  "Effortlessly Investigating Robot Anomalies at Greenzie"
 date: 2022-02-25 05:00:00 -0600
 canonical_url: https://www.greenzie.com/post/effortlessly-investigating-robot-anomalies-at-greenzie
+topic: "Machine learning in production"
 ---
 
 _Originally published on the Greenzie blog, this covers a project I led to make it easier to debug problems on a fleet of autonomous commercial lawnmowers._

@@ -2,6 +2,7 @@
 layout: post
 title:  "Hiking Hallett Peak in RMNP"
 date:   2020-07-26 05:00:00 -0600
+topic: "Outdoors & gear"
 ---
 
 As perhaps one of the youngest owners of a [Franklin Covey Planner](https://shop.franklinplanner.com/store/buy/Planners/cat2120006/), prioritizing and scheduling has been a personal daily exercise for years. However, that daily ritual has fallen into the cracks of the COVID pandemic over the past several months. I love to build things, launch things, and generally create. It's difficult to do that with so many scheduling unknowns related to our two school-age children. Yes, pour a glass of self-pity for our currently healthy and secure family and my lack of personal time.

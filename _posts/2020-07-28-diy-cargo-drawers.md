@@ -2,6 +2,7 @@
 layout: post
 title:  "SUV Cargo Drawers - some research"
 date:   2020-07-28 05:00:00 -0600
+topic: "Outdoors & gear"
 ---
 
 While we store our cooking utensils in our [Scamp Trailer](/2020/07/10/scamp-review.html), it's rare for us to cook and eat a meal inside the camper. It's a pain going in-and-out of the camper to prepare a meal. I'd rather grab these from the trunk of our SUV.

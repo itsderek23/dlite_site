@@ -2,6 +2,7 @@
 layout: post
 title:  "Storybook - a beautiful library for your web components"
 date:   2020-08-16 05:00:00 -0600
+topic: "Product & dev tools"
 ---
 
 ![storybook](/img/posts/storybook/ui.png)

@@ -5,15 +5,16 @@
   <!-- seo + feed_meta are included in the minima theme plugin -->
   <!-- https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md -->
   {%- seo -%}
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/css/main_overrides.css" | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/css/site.css" | relative_url }}">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
   {% if page.hero_image %}
   <meta property="og:image" content="https://dlite.cc{{ page.hero_image }}">
-  <meta name="twitter:image" content=""https://dlite.cc{{ page.hero_image }}">
+  <meta name="twitter:image" content="https://dlite.cc{{ page.hero_image }}">
   {% endif %}
 </head>

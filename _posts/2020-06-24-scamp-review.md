@@ -2,6 +2,7 @@
 layout: post
 title:  "Scamp 16 ft. Trailer review: 3 years later"
 date:   2020-07-10 05:00:00 -0600
+topic: "Outdoors & gear"
 ---
 
 Just over three years ago, our family of four loaded up our [Scamp trailer](https://www.scamptrailers.com/) for the first time in an early-season (and slightly cold) one-night getaway to Red Feather Lakes, Colorado. Outside of our three year-old falling out of the top bunk (more on that later), it was the start of many magical nights in the wilderness. In this post, I'm going to share some of my lessons learned in three years as a Scamp owner.

@@ -1,0 +1,29 @@
+{%- comment -%}
+  Email sign-up form, collected by Netlify Forms (form name "subscribe").
+  Netlify detects it at deploy time, so submitting only works on a Netlify build, not localhost.
+  Renders nothing unless site.subscribe_enabled is true.
+  Params: id (unique per page, required when included more than once),
+          variant: "" (card, end of article) | "compact" (sidebar) | "slim" (homepage),
+          anchor: optional id for the form itself.
+{%- endcomment -%}
+{%- if site.subscribe_enabled -%}
+{%- assign sub_id = include.id | default: "subscribe-email" -%}
+<form class="subscribe{% if include.variant %} subscribe--{{ include.variant }}{% endif %}"{% if include.anchor %} id="{{ include.anchor }}"{% endif %} name="subscribe" method="POST" action="{{ "/subscribed/" | relative_url }}" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="subscribe">
+  {%- if include.variant == "compact" %}
+  <div class="eyebrow">New posts by email</div>
+  {%- else %}
+  <h2 class="subscribe-title">Get new posts by email</h2>
+  <p class="subscribe-copy">A few times a year, when there's something worth reading.</p>
+  {%- endif %}
+  <label class="subscribe-label{% if include.variant == "compact" or include.variant == "slim" %} visually-hidden{% endif %}" for="{{ sub_id }}">Email address</label>
+  <div class="subscribe-row">
+    <input id="{{ sub_id }}" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+    <button type="submit">Subscribe</button>
+  </div>
+  <!-- Bot trap: real people never fill this in. -->
+  <p class="visually-hidden" aria-hidden="true">
+    <label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+  </p>
+</form>
+{%- endif -%}

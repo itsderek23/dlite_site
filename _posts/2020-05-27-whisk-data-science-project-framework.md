@@ -3,6 +3,7 @@ layout: post
 title:  "Meet whisk: a lightweight data science project framework with magical results"
 date:   2020-06-02 05:00:05 -0600
 description: TODO
+topic: "Machine learning in production"
 ---
 
 Like an eager prospector rushing to pan for gold - supplies and dignity be damned - I used to dive into a data science project with just a Jupyter Notebook and a bit of drool collecting in my Civil War era beard. However, that boundless, explore-at-all-cost drive soon backfired. In short time, I'd have an unorganized notebook, duplicate code, plenty of ugly hacks, and a project that's difficult to share, reproduce, and deploy as an ML model.
@@ -23,7 +24,6 @@ The [initial structure](https://docs.whisk-ml.org/en/latest/project_structure.ht
 
 You can follow the [quick tour](https://docs.whisk-ml.org/en/latest/tour_of_whisk.html) in the whisk docs to get orientated on the initial scaffolding. Rather than walking through a trivial example, lets take a look at project built with whisk.
 
-{% include mailchimp.html %}
 
 ## Exploring an existing project
 

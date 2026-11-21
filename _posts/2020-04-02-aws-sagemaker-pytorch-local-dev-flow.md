@@ -6,6 +6,7 @@ author: Derek Haynes
 description: Learn how to develop an ML app for a PyTorch Model faster by using AWS SageMaker local mode.
 hero_image: /img/posts/sagemaker-pytorch-local-dev/screenshot.png
 canonical_url: https://booklet.ai/blog/aws-sagemaker-pytorch-local-dev-flow/
+topic: "Machine learning in production"
 ---
 
 As a hack data scientist but mostly-legit web developer, __I'm frustrated with the process of creating an ML application__ (a simple UI to trigger predictions and a publicly accessible API). The flow for creating and iterating on a typical web application feels like driving down a low-traffic, gently curving country road on a spring day. The ML app dev flow? It's like learning how to drive a car with a manual transmission.
@@ -86,7 +87,6 @@ SageMaker Local Mode requires three categories of changes:
 2. __Local versions of API clients__: normally, you use `botocore.client.SageMaker ` and `botocore.client.SageMaker Runtime` classes to use SageMaker from Python. To use SageMaker locally, we'll use `sagemaker.local.LocalSagemakerClient()` and `sagemaker.local.LocalSagemakerRuntimeClient()` instead.
 3. __Function argument changes__: we also change a couple of arguments to `PyTorchModel()` and `pytorch_model.deploy()`. Those changes are below.
 
-{% include mailchimp.html %}
 
 ### PyTorchModel() for Sagemaker Local
 
@@ -218,7 +218,6 @@ predictor = pytorch_model.deploy(
         initial_instance_count = 1)
 ```
 
-{% include mailchimp.html %}
 
 Now, what is this `deploy/sagemaker/serve.py` file?
 
@@ -390,7 +389,6 @@ __You could build a web app with Flask, React, Docker, etc. Or, you can can just
 
 Already have access to Booklet.ai? [Follow our SageMaker integration instructions](/blog/web-app-for-ml-model/). Don't have access to Booklet.ai yet? Just enter your email below 👇:
 
-{% include mailchimp.html %}
 
 ## Summary
 

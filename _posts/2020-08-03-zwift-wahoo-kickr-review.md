@@ -2,6 +2,7 @@
 layout: post
 title:  "Zwift + Wahoo Kickr Core Review"
 date:   2020-08-03 05:00:00 -0600
+topic: "Outdoors & gear"
 ---
 
 As an almost 40 year-old raised playing competitive team sports, I still itch to take the field. That said, lots of things can make scheduling this time difficult: family commitments, work, and an aging body are just a few of the excuses. That's why I've found group road cycling rides here in Fort Collins, Colorado to be an almost-perfect solution for my middle-aged competitive needs.

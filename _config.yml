@@ -26,6 +26,28 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dlite.cc" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dhaynes23
 github_username:  itsderek23
+linkedin_url: https://www.linkedin.com/in/derek-haynes-ba24b71/
+
+# Email sign-up via Netlify Forms (submissions: Netlify dashboard > Forms > "subscribe").
+# Set to false to hide every sign-up form and the homepage "Subscribe" link.
+subscribe_enabled: true
+
+# Sidebar layout
+author_name: Derek Haynes
+author_initials: DH
+
+# Homepage filters, in display order. Each post sets `topic:` to one of these names;
+# `label` is the short form shown in the post list and filter buttons.
+# (A custom key rather than `category`, which would change post URLs.)
+topics:
+  - name: AI & LLMs
+    label: AI
+  - name: Machine learning in production
+    label: Machine learning
+  - name: Product & dev tools
+    label: Dev tools
+  - name: Outdoors & gear
+    label: Outdoors
 
 # Build settings
 theme: minima
