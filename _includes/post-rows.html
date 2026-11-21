@@ -1,0 +1,10 @@
+<ul class="post-rows">
+  {%- for post in include.posts %}
+  <li>
+    <a class="post-row" href="{{ post.url | relative_url }}">
+      <span class="post-row-title">{{ post.title | escape }}</span>
+      <time class="post-row-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+    </a>
+  </li>
+  {%- endfor %}
+</ul>

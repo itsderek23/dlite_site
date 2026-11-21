@@ -2,6 +2,7 @@
 layout: post
 title:  "A quick look at Rookout, a real-time debugging & logging product"
 date:   2020-08-05 05:00:00 -0600
+topic: "Product & dev tools"
 ---
 
 <img src="/img/posts/rookout/rookout_logo.png" style="float:right;padding:0 0 10px 10px"/>

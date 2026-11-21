@@ -3,6 +3,7 @@ layout: post
 title:  "Drains, sprinklers, and sidewalk edges: behind the development of Greenzie's first ML Model"
 date: 2022-05-22 05:00:00 -0600
 canonical_url: https://www.greenzie.com/post/drains-sprinklers-and-sidewalk-edges-the-motivation-behind-greenzies-first-ml-model
+topic: "Machine learning in production"
 ---
 
 _Originally published on the Greenzie blog, this covers a project I led to deploy an image segmentation model on autonomous commercial lawnmowers._

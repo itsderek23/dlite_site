@@ -1,0 +1,8 @@
+# Build settings live here so they're versioned with the site.
+# These override the build command and publish directory set in the Netlify dashboard.
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"

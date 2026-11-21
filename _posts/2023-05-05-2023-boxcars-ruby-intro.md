@@ -2,6 +2,7 @@
 layout: post
 title:  "Using Boxcars - the lightweight Ruby Langchain alternative - to query a Rails DB with natural language"
 date: 2023-05-06 05:00:00 -0600
+topic: "AI & LLMs"
 ---
 
 You may have heard of [Langchain](https://github.com/hwchase17/langchain), the Python library for creating LLM-powered apps with nearly 35k GitHub stars. Despite the large following, [Langchain can be difficult to use](https://news.ycombinator.com/item?id=35820931) when you want to go deeper than "hello world" tutorials. This experience (and my background as a Rubyist) led me to [Boxcars](https://github.com/BoxcarsAI/boxcars), a Langchain-inspired Ruby gem but with fewer abstactions. 

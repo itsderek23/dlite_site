@@ -2,6 +2,7 @@
 layout: post
 title:  "DIY Scamp Mattress Topper"
 date:   2020-07-27 05:00:00 -0600
+topic: "Outdoors & gear"
 ---
 
 Sometimes toughness builds character. Other times, it just makes me sore. After three years as a [happy 16 ft. Scamp owner](/2020/07/10/scamp-review.html) - but with aching shoulders when sleeping - I decided it was time to succumb to the comforts of middle age. I needed a more comfortable spot to sleep.

@@ -4,6 +4,7 @@ title:  GitHub Codespaces for Machine Learning
 date:   2020-05-26 06:53:05 -0600
 hero_image: /img/posts/codespaces/github_codespaces_screenshot.png
 description: Learn how to give potential contributors to your ML project a smooth onramp by providing a pre-configured IDE environment via GitHub Codespaces.
+topic: "Machine learning in production"
 ---
 
 ![github_codespaces_screenshot](/img/posts/codespaces/github_codespaces_screenshot.png)
@@ -89,7 +90,6 @@ Here's why these settings are used:
 
 View the [devcontainer.json reference](https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference) on the Visual Studio website for a list of all available configuration settings.
 
-{% include mailchimp.html %}
 
 ## Running the project inside Codespaces
 

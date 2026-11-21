@@ -2,6 +2,7 @@
 layout: post
 title:  "Understanding DesignOps coming from DevOps"
 date:   2020-08-18 05:00:00 -0600
+topic: "Product & dev tools"
 ---
 
 As a developer who lived through the advent of DevOps and the squabbling over its meaning, I experienced a bit of déjà vu recently when I stumbled across DesignOps. This post is the Cliff Notes™ version of my research into DesignOps.

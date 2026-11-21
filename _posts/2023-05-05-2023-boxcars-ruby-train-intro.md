@@ -2,6 +2,7 @@
 layout: post
 title:  "Implementing an LLM Agent to complete tasks using Google with Ruby"
 date: 2023-05-08 05:00:00 -0600
+topic: "AI & LLMs"
 ---
 
 <img src ="/img/posts/boxcars_react/cover.png" height=600>

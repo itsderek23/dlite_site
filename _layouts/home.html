@@ -1,36 +1,78 @@
 ---
 layout: default
 ---
-
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  <header class="site-header">
+    <a class="site-mark" href="{{ "/" | relative_url }}">
+      <span class="avatar avatar--xs" aria-hidden="true">{{ site.author_initials }}</span>
+      {{ site.title }}
+    </a>
+    <nav class="site-nav">
+      <a href="{{ "/feed.xml" | relative_url }}">RSS</a>
+      {%- if site.subscribe_enabled %}
+      <a class="site-nav-cta" href="#subscribe">Subscribe</a>
+      {%- endif %}
+    </nav>
+  </header>
 
-  <div class="hero">
-  {{ content }}
-  </div>
+  <section class="hero">
+    <h1 class="hero-name">{{ site.author_name }}</h1>
+    <div class="hero-bio">
+      {{ content }}
+      {%- include social-links.html -%}
+    </div>
+  </section>
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+  <section class="index" aria-label="Writing">
+    <div class="filters" role="group" aria-label="Filter by topic" hidden>
+      <button type="button" class="filter" data-topic="" aria-pressed="true">All</button>
+      {%- for topic in site.topics %}
+      <button type="button" class="filter" data-topic="{{ topic.name | slugify }}" aria-pressed="false">{{ topic.label | escape }}</button>
+      {%- endfor %}
+    </div>
 
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+    <div class="index-head" aria-hidden="true">
+      <span class="index-date">Date</span>
+      <span class="index-title">Title</span>
+      <span class="index-topic">Topic</span>
+    </div>
+
+    <ul class="index-rows">
+      {%- for post in site.posts %}
+        {%- assign topic = site.topics | where: "name", post.topic | first %}
+      <li data-topic="{{ post.topic | slugify }}">
+        <a class="index-row" href="{{ post.url | relative_url }}">
+          <time class="index-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          <span class="index-title">{{ post.title | escape }}</span>
+          <span class="index-topic">{{ topic.label | default: post.topic | escape }}</span>
+        </a>
       </li>
-      {%- endfor -%}
+      {%- endfor %}
     </ul>
+  </section>
 
-    <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  {% include subscribe.html variant="slim" anchor="subscribe" %}
 
+  <footer class="site-footer">
+    <span>© {{ site.author_name }}</span>
+    <a href="{{ "/feed.xml" | relative_url }}">Subscribe via RSS</a>
+  </footer>
 </div>
+
+<script>
+  // Topic filter buttons: hidden until JS runs, so without JS the full list simply shows.
+  (function () {
+    var group = document.querySelector('.filters');
+    if (!group) return;
+    var buttons = group.querySelectorAll('.filter');
+    var rows = document.querySelectorAll('.index-rows li');
+    group.hidden = false;
+    group.addEventListener('click', function (e) {
+      var btn = e.target.closest('.filter');
+      if (!btn) return;
+      var topic = btn.getAttribute('data-topic');
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      rows.forEach(function (li) { li.hidden = !!topic && li.getAttribute('data-topic') !== topic; });
+    });
+  })();
+</script>
