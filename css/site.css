@@ -144,8 +144,33 @@ img, video { max-width: 100%; height: auto; }
   gap: 40px 80px;
   padding: 112px 0 88px;
 }
+.hero-intro { position: relative; flex: 1 1 420px; }
+/* Handwritten greeting floats above the name so the name/bio top alignment is unchanged. */
+.hero-hello {
+  position: absolute;
+  bottom: 100%;
+  left: 0.1em;
+  margin: 0 0 6px;
+  font-family: "Caveat", "Comic Sans MS", cursive;
+  font-weight: 600;
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1;
+  color: var(--accent);
+  transform: rotate(-4deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+}
+.wave { display: inline-block; margin-left: 0.15em; transform-origin: 70% 70%; animation: wave 2.4s ease-in-out 0.4s 2; }
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0); }
+  10%, 30% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+}
+@media (prefers-reduced-motion: reduce) { .wave { animation: none; } }
+.hero-intro:hover .wave { animation: wave 1.2s ease-in-out; }
 .hero-name {
-  flex: 1 1 420px;
   margin: -0.035em 0 0; /* optical: lifts cap tops level with the bio's first line */
   font-family: var(--font-display);
   font-size: clamp(52px, 9vw, 88px);

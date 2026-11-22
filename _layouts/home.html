@@ -16,7 +16,10 @@ layout: default
   </header>
 
   <section class="hero">
-    <h1 class="hero-name">{{ site.author_name }}</h1>
+    <div class="hero-intro">
+      <p class="hero-hello">hi there, I'm <span class="wave" role="img" aria-label="waving hand">👋</span></p>
+      <h1 class="hero-name">{{ site.author_name }}</h1>
+    </div>
     <div class="hero-bio">
       {{ content }}
       {%- include social-links.html -%}
